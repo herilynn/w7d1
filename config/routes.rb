@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     member do
       post :approve
       post :deny
+
+    resources :users, only: [:create, :new]
     end
   end
 end
