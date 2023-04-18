@@ -5,7 +5,9 @@ class User < AppllicationRecord
     
     validates :password, presence: true
     
-    :session_token 
+    validates :session_token, presence: true, uniqueness: true
+
+    before_validation :ensure_session_token
 
     #SPIRE
 

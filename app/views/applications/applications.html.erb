@@ -1,0 +1,6 @@
+<%if @user.logged_in?%>
+<%= @user.username%>
+<%= type="submit" value="logout"%>
+<%else%>
+<%= type="submit" value="login"%>
+<>
